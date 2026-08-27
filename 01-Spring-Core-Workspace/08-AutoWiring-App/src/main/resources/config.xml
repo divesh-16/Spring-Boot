@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+        
+        
+        <!--
+			## In case of "inName" give interface variable name (identifier) to id of any implementation class you want use.
+			## Here I've given to ExcelReportCreator (can be given PdfReportCreator) 
+			
+        <bean id="reportManager" class="com.tca.beans.ReportManager" autowire="byName">
+        </bean>
+        
+        <bean id="pdfReportCreator" class="com.tca.beans.PdfReportCreator">
+        </bean>
+        
+        <bean id="reportCreator" class="com.tca.beans.ExcelReportCreator">
+        </bean>
+        
+        -->
+        
+        <!--
+        	
+        	
+        <bean id="reportManager" class="com.tca.beans.ReportManager" autowire="byType">
+        </bean>
+        
+        <bean id="pdfReportCreator" class="com.tca.beans.PdfReportCreator" primary="true">
+        </bean>
+        
+        <bean id="excelReportCreator" class="com.tca.beans.ExcelReportCreator">
+        </bean>
+        
+        -->
+        
+        <bean id="reportManager" class="com.tca.beans.ReportManager" autowire="constructor">
+        </bean>
+        
+        <bean id="pdfReportCreator" class="com.tca.beans.PdfReportCreator" primary="true" >
+        </bean>
+        
+        <bean id="excelReportCreator" class="com.tca.beans.ExcelReportCreator" >
+        </bean>
+        
+
+</beans>

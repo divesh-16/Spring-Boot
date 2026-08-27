@@ -1,0 +1,1 @@
+alter table student modify column email varchar(100);

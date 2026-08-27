@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    
+	<!--	Using name attribut e-->
+	<!--
+    <bean id="welcomeBean" class="com.tca.beans.WelcomeBean">
+    	<constructor-arg  name="id" value="101" />
+    	<constructor-arg name="message" value="Say Hello to String" />
+    </bean>
+    -->
+	<!--	Using index attribute -->
+	<bean id="welcomeBean" class="com.tca.beans.WelcomeBean">
+    	<constructor-arg  index="0" value="1001" />
+    	<constructor-arg index="1" value="Say Hello to String" />
+    </bean>
+
+</beans>
