@@ -52,7 +52,7 @@ public class MyRunner implements ApplicationRunner
 		service.saveStudent(s2);
 		service.saveStudent(s3);
 		System.out.println("Student Saved");
-		
+		*/
 		
 		// update()
 		/*
@@ -160,10 +160,10 @@ public class MyRunner implements ApplicationRunner
 		*/
 		
 		// delete students through list of ids
-		
+		/*
 		List<Integer> ids = List.of(101,102,103);
 		System.out.println(service.deleteStudentsById(ids) ? "Students deleted" : "Students not deleted");
-		
+		*/
 
 	
 	}
