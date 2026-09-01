@@ -58,7 +58,7 @@ public class MyRunner implements ApplicationRunner
 			printStudent(list);
 		}
 		*/
-		
+/*		
 		List<Object[]> list = service.fetchGenderNamePer(30.0, Gender.FEMALE);
 		for(Object[] s: list)
 		{
@@ -67,5 +67,19 @@ public class MyRunner implements ApplicationRunner
 			System.out.println("Gender     : " + s[2]);
 			System.out.println("-".repeat(50));
 		}
+	
+*/
+		// delete by gender
+		/*
+		System.out.println(service.deleteByGender(Gender.OTHER)+" : No of rows delete with Gender other");
+		
+		*/
+		
+		// update
+		
+		System.out.println(service.updatePer(46.0, 106));
+		System.out.println(service.updatePer(46.0, 108));
+		
+		System.out.println(service.updateGenderSQL(Gender.FEMALE, 105));
 	}
 }

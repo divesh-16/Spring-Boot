@@ -2,12 +2,15 @@ package com.tca.repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import com.tca.entities.Gender;
 import com.tca.entities.Student;
+
+import jakarta.transaction.Transactional;
 
 public interface StudentRepository extends CrudRepository<Student,Integer>
 {
@@ -29,5 +32,20 @@ public interface StudentRepository extends CrudRepository<Student,Integer>
 	@Query(value="SELECT NAME, PER, GENDER FROM STUDENT WHERE per>=:per and gender=:gender", nativeQuery = true)
 	public List<Object[]> findGenderNamePerSQL(@Param("per") Double per, @Param("gender") Gender gender);
 	
+	@Modifying
+	@Transactional
+	@Query("DELETE FROM Student s WHERE s.gender=:gender")
+	public Long deleteByGender(@Param("gender")Gender gender);
+	
+	@Modifying
+	@Transactional
+	@Query("UPDATE Student s SET s.per=:per WHERE s.rno=:rno")
+	public Long updatePer(@Param("per")Double per, @Param("rno") Integer rno);
+	
+	
+	@Query(value="UPDATE STUDENT SET GENDER=:gender WHERE RNO=:rno", nativeQuery = true)
+	@Transactional
+	@Modifying
+	public Long updateGenderSQL(@Param("gender")Gender gender, @Param("rno") Integer rno);
 	
 }

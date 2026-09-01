@@ -34,4 +34,22 @@ public class StudentServiceImpl implements StudentService
 		//return repo.findGenderNamePerJPQL(per, gender);
 		return repo.findGenderNamePerSQL(per, gender);
 	}
+	
+	@Override
+	public Long deleteByGender(Gender gender) 
+	{
+		return repo.deleteByGender(gender);
+	}
+	
+	@Override
+	public Long updatePer(Double per, Integer rno) 
+	{
+		return repo.updatePer(per, rno);
+	}
+	
+	@Override
+	public Long updateGenderSQL(Gender gender, Integer rno) 
+	{
+		return repo.updateGenderSQL(gender, rno);
+	}
 }
