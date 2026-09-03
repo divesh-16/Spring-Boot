@@ -57,7 +57,8 @@ public class MyRunner implements ApplicationRunner
 			printStudent(list);
 		}
 */
-		
+
+/*		
 		List<StudentDTO> list = service.fetchAllStudentDTO();
 		if(list==null || list.isEmpty())
 		{
@@ -67,6 +68,19 @@ public class MyRunner implements ApplicationRunner
 		{
 			printStudentDTO(list);
 		}
+*/
+		//Update
+/*		
+		System.out.println(service.updatePerByGender(75.0, Gender.FEMALE));
+*/
+		
+		//count by gender
+		System.out.println(service.countByGender(Gender.FEMALE));
+		
+		// exists by rno
+		
+		System.out.println(service.existsByRno(101));
+		System.out.println(service.existsByRno(110));
 		
 	}
 

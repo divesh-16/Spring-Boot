@@ -19,6 +19,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @NamedQuery(name = "Student.findByGender", query = "SELECT s FROM Student s WHERE s.gender=:gender")
+@NamedQuery(name = "Student.updatePerByGender", query = "UPDATE Student s SET s.per=:per WHERE s.gender=:gender")
+@NamedQuery(name = "Student.countByGender", query="SELECT count(s) FROM Student s WHERE s.gender=:gender")
 public class Student 
 {
 	@Id

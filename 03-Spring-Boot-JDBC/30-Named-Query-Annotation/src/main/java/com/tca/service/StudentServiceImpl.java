@@ -41,4 +41,22 @@ public class StudentServiceImpl implements StudentService
 		
 		return list2;
 	}
+	
+	@Override
+	public Long updatePerByGender(Double per, Gender gender) 
+	{
+		return repo.updatePerByGender(per, gender);
+	}
+	
+	@Override
+	public Long countByGender(Gender gender) 
+	{
+		return repo.countByGender(gender);
+	}
+	
+	@Override
+	public boolean existsByRno(Integer rno) 
+	{
+		return repo.existsByRno(rno);
+	}
 }
