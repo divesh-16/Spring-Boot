@@ -26,7 +26,26 @@ import lombok.NoArgsConstructor;
 public class Student 
 {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	/*
+		Hibernate: 
+	    create table student (
+	        rno integer not null,
+	        birth_date date,
+	        gender enum ('FEMALE','MALE','OTHER'),
+	        name varchar(255),
+	        per float(53),
+	        primary key (rno)
+	    ) engine=InnoDB
+	Hibernate: 
+	    create table student_seq (
+	        next_val bigint
+	    ) engine=InnoDB
+	Hibernate: 
+	    insert into student_seq ( next_val ) values ( 1 )
+	    // in case of strategy=GenerationType.AUTO 
+	 */
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer rno;
 	
 	@Column(name="NAME")
