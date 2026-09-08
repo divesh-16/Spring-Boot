@@ -2,13 +2,14 @@ package com.tca.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import com.tca.entities.Student;
 
 public interface StudentService 
 {
 	public List<Student> fetchAll();
-	public Optional<Student> getStudentById(Integer rno);
+	public Optional<Student> getStudentById(UUID rno);
 	public Student saveStudent(Student s);
 	public List<Student> saveStudents(List<Student> students);
 	
