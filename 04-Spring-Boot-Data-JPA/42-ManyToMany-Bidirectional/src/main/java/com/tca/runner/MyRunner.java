@@ -30,7 +30,7 @@ public class MyRunner implements ApplicationRunner
 	
 		// In bi-direction setting entity for both is mandatory
 		// i.e set Book for author (a1.setBooks(Arrays.asList(b1,b2)))  and set Author for book (b1.setAuthors(List.of(a1)))
-/*		
+		
 		Author a1 = new Author();
 		a1.setAid(103L);
 		a1.setAuthorName("Jaran");
@@ -47,7 +47,7 @@ public class MyRunner implements ApplicationRunner
 				
 		a1.setBooks(Arrays.asList(b1,b2));
 		authorService.saveAuthor(a1);
-*/	
+	
 	
 /*	
 		// fetch
@@ -66,7 +66,7 @@ public class MyRunner implements ApplicationRunner
 			System.out.println("=".repeat(50));
 		}
 */
-		
+/*		
 
 		// delete
 		//bookService.removeBook(2L);	-> error
@@ -75,5 +75,8 @@ public class MyRunner implements ApplicationRunner
 		// Note In bi-direction the Owning side can only delete the it's own entity, 
 		//if inverse side tries to delete then it gets below Exception
 		//DataIntegrityViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`springboot`.`book_author`, CONSTRAINT `FKhwgu59n9o80xv75plf9ggj7xn` FOREIGN KEY (`book_id`) REFERENCES `book` (`bid`))] [delete from book where bid=?]; SQL [delete from book where bid=?]; constraint [FKhwgu59n9o80xv75plf9ggj7xn]
+*/	
+	
 	}
+	
 }
