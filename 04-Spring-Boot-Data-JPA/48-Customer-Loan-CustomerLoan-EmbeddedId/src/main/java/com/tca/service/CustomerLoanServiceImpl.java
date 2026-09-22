@@ -1,5 +1,7 @@
 package com.tca.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +33,12 @@ public class CustomerLoanServiceImpl implements CustomerLoanService
 	{
 		CustomerLoanId ob = new CustomerLoanId(custId, loanId);
 		repo.deleteById(ob);
+	}
+	
+	@Override
+	public List<CustomerLoan> fetchAll() 
+	{
+		return repo.findAll();
 	}
 
 }
