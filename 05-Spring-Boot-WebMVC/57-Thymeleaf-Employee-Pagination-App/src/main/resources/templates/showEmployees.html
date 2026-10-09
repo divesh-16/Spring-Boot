@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html xmlns:th="www.thymeleaf.org">
+<body>
+	<h1>Employee Details</h1>
+	
+	<table border="2">
+		<thead>
+			<tr>
+				<th>ENO</th>
+				<th>NAME</th>
+				<th>Salary</th>
+				<th>DeptNO</th>
+			</tr>
+		</thead>
+		
+		
+		<tbody>
+            <!-- th:each loops through the 'emps' list passed by the controller -->
+            <tr th:each="emp : ${emps}">
+                <!-- th:text displays the value of each property dynamically -->
+                <td th:text="${emp.eno}">101</td>
+				<td th:text="${emp.name}">Name</td>
+				<td th:text="${emp.salary}">10000.0</td>
+				<td th:text="${emp.deptno}">111</td>
+                
+            </tr>
+		</tbody>
+		
+		
+	</table>
+	
+	<div>
+		<span th:if="${hasPrevious}">
+			<a th:href="@{ /employee/getPage(pgNo=${currPgNo-1}) }">Previous</a>
+		</span>
+		
+		<!--For loop for pgList-->
+		<span th:each="num : ${pgList}">
+			<a th:href="@{ /employee/getPage(pgNo=${num}) }", th:text="${num}"></a>       
+		</span>
+		
+		<span th:if="${hasNext}">
+			<a th:href="@{ /employee/getPage(pgNo=${currPgNo+1}) }">Next</a>
+		</span>
+		
+		
+	</div>
+	
+</body>	
+</html>
