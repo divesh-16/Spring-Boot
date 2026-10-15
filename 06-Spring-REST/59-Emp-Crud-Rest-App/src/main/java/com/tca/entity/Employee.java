@@ -9,7 +9,7 @@ import lombok.Data;
 public class Employee 
 {
 	@Id
-	private Integer empno;
+	private Integer eno;
 	private String name;
 	private Double salary;
 	private Integer deptno;
