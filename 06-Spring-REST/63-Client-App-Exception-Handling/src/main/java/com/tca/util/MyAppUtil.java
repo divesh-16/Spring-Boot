@@ -2,6 +2,8 @@ package com.tca.util;
 
 public interface MyAppUtil 
 {
-	String GET_EMP_URL="http://localhost:8081/employee/{id}";
-	String ADD_EMP_URL="http://localhost:8081/add";
+	String BASE_URL = "http://localhost:8081";
+	String GET_EMP_URL=BASE_URL+"/employee/{id}";
+	String ADD_EMP_URL=BASE_URL+"/add";
+	String PARTIAL_UPDATE=BASE_URL+"/update/{id}";
 }

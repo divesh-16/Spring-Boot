@@ -28,7 +28,7 @@ public class EmployeeRestController
 	@Autowired
 	private EmployeeService service;
 
-	@GetMapping(value="/employee/{id}", produces= {"application/xml", "application/json"})
+	@GetMapping(value="/employee/{id}", produces= {"application/json","application/xml"})
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable Integer id)
 	{
 		Employee emp = service.fetchEmployeeById(id);
@@ -96,7 +96,8 @@ public class EmployeeRestController
 		Employee updatedEmployee = service.updateEmployee(emp);
 		if(updatedEmployee == null)
 		{
-			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+			//return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+			throw new EmployeeNotFoundException("Employee with id : "+emp.getEno()+" does not exists");
 		}
 		else
 		{
@@ -111,7 +112,8 @@ public class EmployeeRestController
 		
 		if(emp == null)
 		{
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			//return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			throw new EmployeeNotFoundException("Employee with id : "+id+" does not exists");
 		}
 		else
 		{

@@ -1,6 +1,9 @@
 package com.tca.runner;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -103,7 +106,7 @@ public class MyRunner implements ApplicationRunner
 		*/
 		
 		// Post /add : calling via exchange()
-		
+		/*
 		ResponseEntity<?> entity = null;
 		
 		try
@@ -146,35 +149,52 @@ public class MyRunner implements ApplicationRunner
 			System.out.println(e);
 		}
 		
-		
+		*/
 		
 		// put /update : calling via exchange()
 		/*
-		Employee emp = new Employee();
-		emp.setEno(102);
-		emp.setName("Disha");
-		emp.setDeptno(333);
-		emp.setSalary(20000.0);
+		ResponseEntity<?> entity = null;
 		
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("Content-Type", "application/xml");
-		headers.add("Accept", "application/xml");
-		
-		HttpEntity<Employee> requestEntity = new HttpEntity<>(emp, headers);
-		
-		ResponseEntity<Employee> entity = rt.exchange("http://localhost:8081/update", 
-				HttpMethod.PUT, 
-				requestEntity, 
-				Employee.class
-				);
-		
-		HttpStatusCode status = entity.getStatusCode();
-
-		if(status.is2xxSuccessful())
+		try
 		{
-			emp = entity.getBody();
-			System.out.println("Employees Data :" + emp);
+			Employee emp = new Employee();
+			emp.setEno(102);
+			emp.setName("Disha Disha");
+			emp.setDeptno(333);
+			emp.setSalary(20000.0);
+			
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Content-Type", "application/xml");
+			headers.add("Accept", "application/xml");
+			
+			HttpEntity<Employee> requestEntity = new HttpEntity<>(emp, headers);
+			
+			entity = rt.exchange("http://localhost:8081/update", 
+					HttpMethod.PUT, 
+					requestEntity, 
+					Employee.class
+					);
+			
+			HttpStatusCode status = entity.getStatusCode();
+
+			if(status.is2xxSuccessful())
+			{
+				emp = (Employee) entity.getBody();
+				System.out.println("Employees Data :" + emp);
+			}
 		}
+		catch(HttpClientErrorException | HttpServerErrorException ex)
+		{
+			entity = new ResponseEntity<>(ex.getResponseBodyAsString(), ex.getStatusCode());
+			System.out.println("Error Response : ");
+			System.out.println("Body        :" + entity.getBody());
+			System.out.println("Status Code : " + entity.getStatusCode());
+		}
+		catch(Exception e)
+		{
+			
+		}
+		
 		*/
 		
 		/*
@@ -193,5 +213,81 @@ public class MyRunner implements ApplicationRunner
 		
 		*/
 		
+		
+		
+		// Patch for object
+		// for patch 
+		/*
+		// Add this dependency in client app's pom.xml
+		<dependency>
+		    <groupId>org.apache.httpcomponents.client5</groupId>
+		    <artifactId>httpclient5</artifactId>
+		    <version>5.3.1</version> <!-- Use a version compatible with Spring Boot 4.x / Spring 7.x -->
+		</dependency>		
+		
+		// And create of RestTemplate as 
+		
+		@Bean
+		public RestTemplate getRestTemplate()
+		{
+			//return new RestTemplate();
+			HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
+		      
+			return new RestTemplate(factory);
+		}
+		
+
+		
+		
+		*/
+		/*
+		Map<String, Object> map = new HashMap<>();
+		map.put("name", "Divesh");
+		map.put("salary", 60000.0);
+		
+		
+		Employee emp = rt.patchForObject(MyAppUtil.PARTIAL_UPDATE, map, Employee.class, 102);
+		
+		System.out.println(emp);
+		*/
+		
+		/*
+		ResponseEntity<?> entity = null;
+		
+		try
+		{
+			Map<String, Object> map = new HashMap<>();
+			map.put("name", "Divesh");
+			map.put("salary", 60000.0);
+			
+			HttpHeaders headers = new HttpHeaders();
+//			headers.add("Content-Type", "application/xml");
+			headers.add("Accept", "application/json");
+			
+			HttpEntity<Map<String, Object>> requestEntity = new HttpEntity<>(map, headers);
+			
+			entity = rt.exchange(MyAppUtil.PARTIAL_UPDATE, HttpMethod.PATCH , requestEntity, Employee.class, 103);
+			
+			HttpStatusCode status = entity.getStatusCode();
+
+			if(status.is2xxSuccessful())
+			{
+				Employee emp = (Employee) entity.getBody();
+				System.out.println("Employees Data :" + emp);
+			}
+		}
+		catch(HttpClientErrorException | HttpServerErrorException ex)
+		{
+			entity = new ResponseEntity<>(ex.getResponseBodyAsString(), ex.getStatusCode());
+			System.out.println("Error Response : ");
+			System.out.println("Body        :" + entity.getBody());
+			System.out.println("Status Code : " + entity.getStatusCode());
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		
+		*/
 	}
 }
