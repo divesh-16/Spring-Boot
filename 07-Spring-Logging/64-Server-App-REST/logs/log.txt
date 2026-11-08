@@ -1,0 +1,86 @@
+2026-11-08T12:12:01.222+05:30  WARN 23172 --- [63-Server-App-REST-Exception-Handling] [HikariPool-10:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Thread starvation or clock leap detected (housekeeper delta=17h41m27s67ms848µs100ns).
+2026-11-08T12:29:35.264+05:30  WARN 23172 --- [63-Server-App-REST-Exception-Handling] [HikariPool-10:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Thread starvation or clock leap detected (housekeeper delta=7m36s715ms36µs700ns).
+2026-11-08T13:16:51.105+05:30  WARN 23172 --- [63-Server-App-REST-Exception-Handling] [HikariPool-10:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Thread starvation or clock leap detected (housekeeper delta=47m15s841ms740µs700ns).
+2026-11-08T13:23:32.579+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 14 class path changes (0 additions, 5 deletions, 9 modifications)
+2026-11-08T13:23:32.582+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [Thread-37] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-08T13:23:32.599+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-11-08T13:23:32.610+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-08T13:23:32.622+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2026-11-08T13:23:32.643+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2026-11-08T13:23:53.197+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] com.tca.Application                      : Starting Application using Java 25.0.3 with PID 23172 (D:\Study\Spring-Boot-Microservice\Spring-Boot-Workspace\07-Spring-Logging\64-Server-App-REST\target\classes started by Kirti in D:\Study\Spring-Boot-Microservice\Spring-Boot-Workspace\07-Spring-Logging\64-Server-App-REST)
+2026-11-08T13:23:53.198+05:30 DEBUG 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] com.tca.Application                      : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-11-08T13:23:53.198+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] com.tca.Application                      : No active profile set, falling back to 1 default profile: "default"
+2026-11-08T13:23:53.762+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-08T13:23:53.792+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interface.
+2026-11-08T13:23:54.071+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-11-08T13:23:54.089+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-08T13:23:54.090+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-08T13:23:54.170+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 966 ms
+2026-11-08T13:23:54.373+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-08T13:23:54.450+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-08T13:23:54.453+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2026-11-08T13:23:54.550+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e04abb6
+2026-11-08T13:23:54.551+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2026-11-08T13:23:54.559+05:30  WARN 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-08T13:23:54.560+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3300/springboot]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.36
+	Default catalog/schema: springboot/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-08T13:23:54.715+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-08T13:23:54.998+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-08T13:23:55.170+05:30  WARN 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-08T13:23:55.548+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-11-08T13:23:55.553+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] com.tca.Application                      : Started Application in 2.57 seconds (process running for 86501.374)
+2026-11-08T13:23:55.555+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-11-08T13:23:59.913+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-11-08T13:23:59.915+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [Thread-41] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-08T13:23:59.925+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-11-08T13:23:59.927+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [Thread-41] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-08T13:23:59.928+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [Thread-41] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2026-11-08T13:23:59.936+05:30  INFO 23172 --- [63-Server-App-REST-Exception-Handling] [Thread-41] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2026-11-08T13:24:00.095+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] com.tca.Application                      : Starting Application using Java 25.0.3 with PID 23172 (D:\Study\Spring-Boot-Microservice\Spring-Boot-Workspace\07-Spring-Logging\64-Server-App-REST\target\classes started by Kirti in D:\Study\Spring-Boot-Microservice\Spring-Boot-Workspace\07-Spring-Logging\64-Server-App-REST)
+2026-11-08T13:24:00.096+05:30 DEBUG 23172 --- [65-Server-App-REST-Logging] [restartedMain] com.tca.Application                      : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-11-08T13:24:00.096+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] com.tca.Application                      : No active profile set, falling back to 1 default profile: "default"
+2026-11-08T13:24:00.474+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-08T13:24:00.494+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2026-11-08T13:24:00.708+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-11-08T13:24:00.709+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-08T13:24:00.710+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-08T13:24:00.809+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 704 ms
+2026-11-08T13:24:00.898+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-08T13:24:00.979+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-08T13:24:00.981+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2026-11-08T13:24:01.024+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49bef5fd
+2026-11-08T13:24:01.025+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2026-11-08T13:24:01.028+05:30  WARN 23172 --- [65-Server-App-REST-Logging] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-08T13:24:01.030+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3300/springboot]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.36
+	Default catalog/schema: springboot/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-08T13:24:01.115+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-08T13:24:01.136+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-08T13:24:01.251+05:30  WARN 23172 --- [65-Server-App-REST-Logging] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-08T13:24:01.398+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-11-08T13:24:01.400+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [restartedMain] com.tca.Application                      : Started Application in 1.365 seconds (process running for 86507.221)
+2026-11-08T13:27:29.907+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [RMI TCP Connection(107)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-11-08T13:27:29.908+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [RMI TCP Connection(107)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-08T13:27:29.920+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-11-08T13:27:29.923+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [RMI TCP Connection(107)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-08T13:27:29.923+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [RMI TCP Connection(107)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2026-11-08T13:27:29.929+05:30  INFO 23172 --- [65-Server-App-REST-Logging] [RMI TCP Connection(107)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.

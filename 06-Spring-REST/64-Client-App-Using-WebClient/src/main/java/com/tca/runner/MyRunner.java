@@ -150,7 +150,7 @@ public class MyRunner implements ApplicationRunner
 				});
 */
 		
-		// parial update, calling patch /update/{id}
+		// partial update, calling patch /update/{id}
 		
 		Map<String, Object> map = new HashMap<>();
 		map.put("name", "Don");
